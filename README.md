@@ -1,4 +1,4 @@
-# TaskTracker
+# Task Tracker
 
 ## How To Run (Must Follow Steps in Order)
 1. Install `virtualenv`:
