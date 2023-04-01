@@ -21,9 +21,11 @@ $ source env/bin/activate
 $ (env) pip install -r downloads.txt
 ```
 
-5. Run program and `paste server` into web browser:
+5. Run program to get `server`:
 ```
 $ (env) python app.py
+```
+6. Paste follwing `url` in to web browser:
+```
 http://127.0.0.1:5000/
 ```
-
