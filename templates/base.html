@@ -1,0 +1,16 @@
+<!-- This file is the outline of other html files in this folder. Instead of writting this
+chunk out every file, we can use block head and body to create text -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link with main.css file to get font-->
+    <link rel = "stylesheet" href="{{url_for('static', filename = 'css/main.css')  }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
