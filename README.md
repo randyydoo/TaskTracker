@@ -23,7 +23,7 @@ $ (env) pip install -r downloads.txt
 
 5. Run program to get `server`:
 ```
-$ (env) python app.py
+$ (env) python3 app.py
 ```
 6. Paste follwing `url` in to web browser:
 ```
