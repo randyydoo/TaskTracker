@@ -6,14 +6,14 @@
 
 {% block body %}
 <div class = "content">
-   <h1 align = "center">Task Master</h1>
+   <h1 align = "center" style = "color:#04b08e;">Task Master</h1>
    <!---- Create table for tasks -->
    <table align = "center">
       <!---- Create row for each task -->
       <tr>
-         <th>Task</th>
-         <th>Date</th>
-         <th>Actions</th>
+         <th style = "color: white">Task</th>
+         <th style = "color: white">Date</th>
+         <th style = "color: white">Actions</th>
       </tr>
       <!--grabs all tasks and displays in this row-->
       {% for task in tasks %}
@@ -22,13 +22,34 @@
             <td>{{  task.date_created.date() }}</td>
             <td>
                <!--use delete with task.id to delete-->
-               <a href="/delete/{{task.id}}">Delete</a>
+               <a type = "del" href="/delete/{{task.id}}" style="color:blue">Delete</a>
                <br>
-               <a href="/update/{{task.id}}">Update</a>
+               <a type = "up" href="/update/{{task.id}}" style="color:blue">Update</a>
             </td>
          </tr>
       {% endfor %}
    </table>
+
+   <style>
+      input[type = text]{
+         background-color: #fdfdfd;
+         border: #04b08e;
+         height: 25px;
+         border-radius: 5px;
+         color: rgb(0, 0, 0);
+      }
+      input[type = submit]{
+         background-color: #04b08e;
+         border: #04b08e;
+         border-radius: 5px;
+         color: white;
+         padding: 6px;
+         text-decoration: none;
+         margin: 2px 4px;
+         cursor: pointer;
+      }
+   </style>
+
    <div class = "form">
       <form align = "center" action = '/' method = 'POST'>
          <input type = "text" name = "content" id = "content">
